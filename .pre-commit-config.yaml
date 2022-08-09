@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.2.0
+    rev: v4.3.0
     hooks:
       - id: check-ast
       - id: check-builtin-literals
@@ -16,13 +16,13 @@ repos:
       - id: check-vcs-permalinks
 
   - repo: https://github.com/hadialqattan/pycln
-    rev: v1.3.1
+    rev: v2.1.1
     hooks:
       - id: pycln
         args: [--all]
 
   - repo: https://github.com/psf/black
-    rev: 22.3.0
+    rev: 22.6.0
     hooks:
       - id: black
 
@@ -37,10 +37,10 @@ repos:
     hooks:
       - id: flake8
         entry: pflake8
-        additional_dependencies: [pyproject-flake8]
+        additional_dependencies: [pyproject-flake8] # not compatible with 5.0 yet
 
-  - repo: https://github.com/Woile/commitizen
-    rev: v1.23.0
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: v2.29.5
     hooks:
       - id: commitizen
         stages: [commit-msg]
